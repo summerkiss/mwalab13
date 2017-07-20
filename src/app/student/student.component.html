@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let s of students">
+    <a [routerLink]="['profile']" [queryParams]="{id: s.id}">{{s.name}}</a>
+  </li>
+</ul>
