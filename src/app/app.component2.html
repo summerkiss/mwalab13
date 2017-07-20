@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <h1>Router Lab13</h1>
+      <hr>
+
+      <a [routerLink]="['']">homepage</a> |
+      <a [routerLink]="['student']">students</a> |
+      <a [routerLink]="['params', 'route', id.value]">Route Param</a> |
+      <a [routerLink]="['params', 'query']" [queryParams]="{id: id.value}">Query Param</a> |
+      <a [routerLink]="['params', 'fragment']" [fragment]="id.value">Fragment</a> |
+      <a [routerLink]="['params', 'preserve']" [preserveQueryParams]="true" [preserveFragment]="true">Preserved All</a> |
+      <input type="text" #id (input)="0">
+      <a [routerLink]="['parentchild', 'parent']">Parent</a> |
+      <a [routerLink]="['parentchild', 'parent', 'child']">Parent-Child</a> |
+      <a [routerLink]="['guards']">Guards</a>
+      <hr>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
